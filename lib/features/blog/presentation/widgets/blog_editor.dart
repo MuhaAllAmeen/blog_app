@@ -13,6 +13,12 @@ class BlogEditor extends StatelessWidget {
         hintText: text,
       ),
       maxLines: null,
+      validator: (value) {
+        if(value!.isEmpty){
+          return '$text is Empty';
+        }
+        return null;
+      },
     );
   }
 }
